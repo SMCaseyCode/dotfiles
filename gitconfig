@@ -1,5 +1,5 @@
 [core]
-    excludefile = ~/dotfiles/gitignore
+    excludesfile = ~/dotfiles/gitignore
 [init]
     defaultBranch = master
 [user]
