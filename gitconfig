@@ -1,0 +1,7 @@
+[core]
+    excludefile = ~/dotfiles/gitignore
+[init]
+    defaultBranch = master
+[user]
+    name = SMCaseyCode
+    email = steve@caseycontact.com
