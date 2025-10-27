@@ -16,6 +16,7 @@ DOTFILES=(
   "kitty"
   "waybar"
   "wireplumber"
+  "fastfetch"
 )
 
 echo "Starting initial dotfile setup..."
