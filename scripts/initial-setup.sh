@@ -17,6 +17,7 @@ DOTFILES=(
   "waybar"
   "wireplumber"
   "fastfetch"
+  "yazi"
 )
 
 echo "Starting initial dotfile setup..."
@@ -46,3 +47,5 @@ done
 # .gitconfig
 ln -sf "$DOTFILES_DIR/gitconfig" "$HOME/.gitconfig"
 
+# .bashrc
+ln -sf "$DOTFILES_DIR/bashrc" "$HOME/.bashrc"
