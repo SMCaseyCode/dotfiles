@@ -45,6 +45,7 @@ window.DP-1#waybar.top {
 }
 
 #workspaces {
+	font-weight: bold;
 	background-color: @background;
 	border: 0.8px solid @foreground;
 	border-radius: 6px;
