@@ -2,4 +2,4 @@
 
 WALLPAPER=$(hyprctl hyprpaper listloaded)
 
-wal -n -s -t -i "$WALLPAPER"
+wal -n -s -t -e -i "$WALLPAPER"

@@ -130,8 +130,10 @@ window.DP-1#waybar.top {
 
 #workspaces button.active {
 	background-color: @color11;
+	border-radius: 4px;
 }
 
 #workspaces button:hover {
 	background-color: @color1;
+	border-radius: 4px;
 }
