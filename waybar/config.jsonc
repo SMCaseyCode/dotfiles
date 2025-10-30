@@ -1,9 +1,10 @@
 
 // -*- mode: jsonc -*-
 [
-
-// Primary Monitor (5120x1440) ////////////////////
+	// Primary Monitor (5120x1440) ////////////////////
   {
+		"reload_style_on_change": true,
+
     "output": "HDMI-A-1",
 		"layer": "top",
 		"position": "top",
@@ -11,16 +12,28 @@
     "spacing": 4,
     
     "modules-left": [
-      "hyprland/window"
+      "hyprland/window#main"
     ],
     "modules-center": [
-			"hyprland/workspaces"
+			"hyprland/workspaces#main"
 		],
-    "modules-right": []
+    "modules-right": [],
+		"hyprland/workspaces#main": {
+			"format": "{icon}",
+			"format-icons": {
+				"1": "I",
+				"2": "II",
+				"3": "III",
+				"4": "IV",
+				"5": "V"
+			}
+		}
   },
 
 // Second Monitor (1920x1080) ////////////////////
   {
+    "reload_style_on_change": true,
+
 		// POSITIONING ////////////////
     "output": "DP-1",
 		"layer": "top",
@@ -38,51 +51,70 @@
 			"hyprland/window"
 		],
 		"modules-right": [
-			"custom/clock",
 			"network",
-			"temperature#1",
-			"temperature#2",
+			/*"temperature",*/
 			"cpu",
-			"memory"
+			"memory",
+	    "custom/clock"
 		],
 
 		// SETTINGS ///////////////////
+		"tray": {
+			"spacing": 10
+		},
 		"hyprland/submap": {
 			"format": "<span style=\"italic\">{}</span>"
+		},
+		"hyprland/workspaces": {
+			"format": "{icon}",
+			"format-icons": {
+				"6": "VI",
+				"7": "VII",
+				"8": "VIII",
+				"9": "IX",
+				"10": "X"
+			}
+		},
+		"hyprland/window": {
+			"format": "{}",
+			"max-length": 70
 		},
 		"custom/spotify": {
 			"exec": "/usr/bin/python3 ~/dotfiles/waybar/custom-modules/mediaplayer.py --player spotify",
 			"format": "{}",
 		  "return-type": "json",
+			"max-length": 30,
 			"on-click": "playerctl play-pause -p spotify",
 			"on-scroll-up": "playerctl next -p spotify",
 			"on-scroll-down": "playerctl previous -p spotify"
 		},
 		"custom/clock": {
 			"exec": "date +\"%-I:%M\"",
-			"interval": 60,
+			"interval": 20,
 			"tooltip": "false"
 		},
 		"network": {
 			"format": "󰖩 {bandwidthDownBits}",
 			"format-disconnected": " 󰖪 ",
 			"interval": 2,
-			"min-length": 10,
-			"max-length": 10,
+			"min-length": 12,
+			"max-length": 12,
 			"tooltip": "false"
 		},
-		"temperature#1": {
+		/*"temperature": {
 			"thermal-zone": 2,
-			"format": "{temperatureC}°C",
+			"format": "  {temperatureC}°C /",
 			"interval": 5
-		},
+		},*/
 		"cpu": {
-      "format": "C {usage}%",
-			"interval": 5
+      "format": "   {usage}%",
+			"interval": 5,
+			"min-length": 6
 		},
 		"memory": {
-      "format": "M {used} GiB",
-			"interval": 5
+      "format": "   {used} GiB",
+			"interval": 5,
+			"min-length": 10
 		}
   }
 
