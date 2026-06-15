@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+eval $(keychain --eval --quiet ~/.ssh/git-key)
+
 export EDITOR='nvim'
 
 alias commands='cat $HOME/Documents/commands.md'
