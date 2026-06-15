@@ -7,27 +7,67 @@
 
     "output": "HDMI-A-1",
 		"layer": "top",
-		"position": "top",
-    "height": 30,
+		"position": "bottom",
+    "height": 12,
     "spacing": 4,
     
     "modules-left": [
+      "hyprland/workspaces#main",
       "hyprland/window#main"
     ],
     "modules-center": [
-			"hyprland/workspaces#main"
 		],
-    "modules-right": [],
+    "modules-right": [
+      "cpu",
+      "memory",
+      "custom/spotify-main",
+      "network",
+      "custom/clock"
+    ],
+
 		"hyprland/workspaces#main": {
 			"format": "{icon}",
 			"format-icons": {
-				"1": "I",
-				"2": "II",
-				"3": "III",
-				"4": "IV",
-				"5": "V"
+				"1": "1",
+				"2": "2",
+				"3": "3",
+				"4": "4",
+				"5": "5"
 			}
+		},
+
+    "custom/clock": {
+			"exec": "date '+%a, %B %-d %Y %-I:%M %p'",
+			"interval": 5,
+			"tooltip": "false"
+		},
+    "custom/spotify-main": {
+			"exec": "/usr/bin/python3 ~/dotfiles/waybar/custom-modules/mediaplayer.py --player spotify",
+			"format": "{}",
+		  "return-type": "json",
+      "min-length" : 32,
+			"max-length": 32,
+			"on-click": "playerctl play-pause -p spotify",
+			"on-scroll-up": "playerctl next -p spotify",
+			"on-scroll-down": "playerctl previous -p spotify"
+		},
+    	"cpu": {
+      "format": "   {usage}%",
+			"interval": 5,
+			"min-length": 6
+		},
+		"memory": {
+      "format": "   {used} GiB",
+			"interval": 5,
+			"min-length": 10
+		},
+    		"network": {
+			"format": " 󰖩 ",
+			"format-disconnected": " 󰖪 ",
+			"interval": 30,
+			"tooltip": "false"
 		}
+
   },
 
 // Second Monitor (1920x1080) ////////////////////
@@ -37,8 +77,8 @@
 		// POSITIONING ////////////////
     "output": "DP-1",
 		"layer": "top",
-		"positon": "top",
-    "height": 30,
+		"positon": "bottom",
+    "height": 12,
     "spacing": 4,
     
 		// MODULES ///////////////////
@@ -68,11 +108,11 @@
 		"hyprland/workspaces": {
 			"format": "{icon}",
 			"format-icons": {
-				"6": "VI",
-				"7": "VII",
-				"8": "VIII",
-				"9": "IX",
-				"10": "X"
+				"6": "6",
+				"7": "7",
+				"8": "8",
+				"9": "9",
+				"10": "10"
 			}
 		},
 		"hyprland/window": {
@@ -94,11 +134,9 @@
 			"tooltip": "false"
 		},
 		"network": {
-			"format": "󰖩 {bandwidthDownBits}",
+			"format": " 󰖩 ",
 			"format-disconnected": " 󰖪 ",
-			"interval": 2,
-			"min-length": 12,
-			"max-length": 12,
+			"interval": 30,
 			"tooltip": "false"
 		},
 		/*"temperature": {

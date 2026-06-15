@@ -1,1 +1,16 @@
-hypr/modules/colors.conf
+*.env
+*.pem
+*/colors.lua
+nvim/nvim-pack-lock.json
+*.bak
+*.bk
+*/colors.css
+
+tt.*
+.tests
+.doc/tags
+debug
+.repro
+foo.*
+*.log
+data

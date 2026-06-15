@@ -1,0 +1,70 @@
+@import ".config/wofi/colors.css";
+
+* {
+  outline: none;
+}
+
+window {
+  background-color: transparent;
+  font-family: "JetBrainsMonoNL Nerd Font";
+  font-size: 1.2rem;
+}
+
+#input {
+  font-size: 1.4rem;
+  color: @inverse_on_surface;
+
+  border-radius: 7px;
+  padding: 10px 12px 10px 0px;
+  background-color: @on_surface;
+
+  margin: 1rem 1.4rem 1rem 1.4rem;
+}
+
+#input selection {
+  background-color: @on_primary_fixed_variant;
+}
+
+#entry:selected {
+  border-radius: 12px;
+}
+
+#inner-box {
+  background-color: transparent;
+  margin: 0rem 1.4rem 0rem 1.4rem;
+}
+
+#scroll {
+  padding-bottom: 1.4rem;
+}
+
+#text {
+  padding: 5px 10px;
+  margin: 4px 0px;
+}
+
+#img {
+  padding-left: 5px
+}
+
+#outer-box {
+  background-color: alpha(@surface, .85);
+  border: 2px solid @on_primary_fixed_variant;
+  border-radius: 10px;
+}
+
+#expander-box {
+  background-color: alpha(@surface, .85);
+  border-radius: 7px;
+}
+
+#input > image.left {
+  -gtk-icon-transform:scaleX(0);
+}
+
+#input > image.right {
+  padding-left: 10px;
+}
+
+
+

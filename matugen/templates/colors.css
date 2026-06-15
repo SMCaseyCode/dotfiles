@@ -1,0 +1,9 @@
+/*
+* Css Colors
+* Generated with Matugen
+*/
+    @define-color background-rgba rgba({{ colors.surface_container_lowest.dark.red }}, {{colors.surface_container_lowest.dark.green}}, {{colors.surface_container_lowest.dark.blue}}, 0.7);
+    @define-color background-transparent rgba({{ colors.surface_container_lowest.dark.red }}, {{colors.surface_container_lowest.dark.green}}, {{colors.surface_container_lowest.dark.blue}}, 0.2);
+<* for name, value in colors *>
+    @define-color {{name}} {{value.default.hex}};
+<* endfor *>

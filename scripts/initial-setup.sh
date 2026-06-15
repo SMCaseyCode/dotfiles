@@ -18,6 +18,10 @@ DOTFILES=(
   "wireplumber"
   "fastfetch"
   "yazi"
+  "wofi"
+  "swaync"
+  "nvim"
+  "matugen"
 )
 
 echo "Starting initial dotfile setup..."

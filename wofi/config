@@ -1,0 +1,22 @@
+## Wofi Config
+
+## General
+show=drun
+prompt=Search...
+allow_images=true
+
+## Sizing
+width=600
+dynamic_lines=false
+
+## Search
+insensitive=true
+
+## Misc
+hide_scroll=true
+no_actions=true
+sort_order=default
+gtk_dark=true
+close_on_focus_loss=true
+
+## Binds
