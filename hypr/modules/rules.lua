@@ -58,9 +58,23 @@ hl.window_rule({
 })
 
 hl.window_rule({
+  name = "windowrule-pin-pnp",
+  pin = true,
+  float = true,
+  match = { title = "Picture-in-Picture" },
+})
+
+hl.window_rule({
 	name = "windowrule-no-transparent-mpvplayer",
 	opacity = "1.0 1.0 override",
 	match = { class = "^(mpv)$" },
+})
+
+hl.window_rule({
+  name = "windowrule-pin-mpv",
+  pin = true,
+  float = true,
+  match = { class = "^(mpv)$" },
 })
 
 hl.layer_rule({

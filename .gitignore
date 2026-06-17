@@ -5,6 +5,8 @@ nvim/nvim-pack-lock.json
 *.bak
 *.bk
 */colors.css
+kitty/current-theme.conf
+kitty/themes/Matugen.conf
 
 tt.*
 .tests

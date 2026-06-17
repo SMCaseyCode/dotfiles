@@ -12,6 +12,14 @@ hl.monitor({
 	position = "0x0",
 	scale = 1.25,
 	vrr = 3,
+  cm = "hdredid",
+  min_luminance = 0,
+  max_luminance = 400,
+  sdr_min_luminance = 0,
+  sdr_max_luminance = 400,
+  sdrbrightness = .4,
+  sdrsaturation = 1,
+  supports_hdr = 1,
 })
 
 -- Secondary Monitor (Wacom 16")
@@ -23,13 +31,13 @@ hl.monitor({
 	cm = "auto",
 })
 
--- HDR & VRR
+-- HDR
 hl.config({
 	render = {
-		cm_auto_hdr = 1,
+--		cm_auto_hdr = 2,
 	},
 
 	quirks = {
-		prefer_hdr = 2,
+		prefer_hdr = 1,
 	},
 })

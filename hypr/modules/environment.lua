@@ -24,3 +24,6 @@ hl.env("HYPRSHOT_DIR", "Pictures/Screenshots")
 
 -- QT
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+
+-- GTK
+--hl.env("GTK_THEME", "adw-gtk3-dark")

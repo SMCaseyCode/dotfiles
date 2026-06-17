@@ -13,4 +13,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("swaync")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
+  -- Required for things like GNOME calculator to match theme
+  hl.exec_cmd("/usr/lib/xdg-desktop-portal")
 end)
