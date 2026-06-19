@@ -17,3 +17,5 @@ alias vim='nvim'
 
 PS1='[\u@\h \W]\$ '
 alias yt-resolve='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" --postprocessor-args "ffmpeg:-c:v dnxhd -profile:v dnxhr_hq -pix_fmt yuv422p -c:a pcm_s16le" --merge-output-format mov'
+export DOTNET_ROOT="$HOME/.dotnet"
+export PATH="$PATH:$HOME/.dotnet"
