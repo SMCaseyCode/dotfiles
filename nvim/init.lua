@@ -11,7 +11,6 @@ vim.opt.tabstop = 2         -- Sets visual spacing of TAB
 vim.opt.shiftwidth = 2      -- Sets autospacing width
 vim.opt.softtabstop = 2     -- Sets spaces inserted/deleted with TAB/backspace in Insert mode
 vim.opt.expandtab = true    -- Insert spaces instead of TAB characters
-vim.g.mapleader = " "
 vim.opt.termguicolors = true
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false
@@ -20,8 +19,8 @@ vim.opt.wrap = false
 --- PLUGINS ---
 ---------------
 vim.pack.add({
-  { src = 'https://github.com/HiPhish/rainbow-delimiters.nvim',  name = 'rainbow-delimiters' },
-  { src = 'https://github.com/mason-org/mason.nvim',             name = "mason" },
+  { src = 'https://github.com/HiPhish/rainbow-delimiters.nvim'},
+  { src = 'https://github.com/mason-org/mason.nvim'},
   { src = 'https://github.com/neovim/nvim-lspconfig' },
   { src = 'https://github.com/nvim-tree/nvim-web-devicons' },
   { src = 'https://github.com/nvim-lualine/lualine.nvim' },
@@ -57,8 +56,11 @@ vim.lsp.enable({
 -------------
 --- BINDS ---
 -------------
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
-vim.keymap.set('n', '<leader>w', ':write<CR>')
-vim.keymap.set('n', '<leader>q', ':quit<CR>')
-vim.keymap.set({ 'n', 'v', 'x' }, '<leader>y', '"+y<CR>')
-vim.keymap.set({ 'n', 'v', 'x' }, '<leader>d', '"+d<CR>')
+local map = vim.keymap.set
+vim.g.mapleader = " "
+
+map('n', '<leader>lf', vim.lsp.buf.format)
+map('n', '<leader>w', ':write<CR>')
+map('n', '<leader>q', ':quit<CR>')
+map({ 'n', 'v', 'x' }, '<leader>y', '"+y<CR>')
+map({ 'n', 'v', 'x' }, '<leader>d', '"+d<CR>')
