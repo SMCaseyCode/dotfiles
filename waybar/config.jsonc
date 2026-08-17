@@ -154,6 +154,93 @@
 			"interval": 5,
 			"min-length": 10
 		}
+  },
+
+  // Headless ////////////////////
+  {
+    "reload_style_on_change": true,
+
+		// POSITIONING ////////////////
+    "output": "HEADLESS-1",
+		"layer": "top",
+		"positon": "bottom",
+    "height": 12,
+    "spacing": 4,
+    
+		// MODULES ///////////////////
+    "modules-left": [
+      "hyprland/workspaces",
+			"tray",
+			"custom/spotify"
+    ],
+		"modules-center": [
+			"hyprland/window"
+		],
+		"modules-right": [
+			"network",
+			/*"temperature",*/
+			"cpu",
+			"memory",
+	    "custom/clock"
+		],
+
+		// SETTINGS ///////////////////
+		"tray": {
+			"spacing": 10
+		},
+		"hyprland/submap": {
+			"format": "<span style=\"italic\">{}</span>"
+		},
+		"hyprland/workspaces": {
+			"format": "{icon}",
+			"format-icons": {
+				"6": "6",
+				"7": "7",
+				"8": "8",
+				"9": "9",
+				"10": "10"
+			}
+		},
+		"hyprland/window": {
+			"format": "{}",
+			"max-length": 70
+		},
+		"custom/spotify": {
+			"exec": "/usr/bin/python3 ~/dotfiles/waybar/custom-modules/mediaplayer.py --player spotify",
+			"format": "{}",
+		  "return-type": "json",
+			"max-length": 30,
+			"on-click": "playerctl play-pause -p spotify",
+			"on-scroll-up": "playerctl next -p spotify",
+			"on-scroll-down": "playerctl previous -p spotify"
+		},
+		"custom/clock": {
+			"exec": "date +\"%-I:%M\"",
+			"interval": 20,
+			"tooltip": "false"
+		},
+		"network": {
+			"format": " 󰖩 ",
+			"format-disconnected": " 󰖪 ",
+			"interval": 30,
+			"tooltip": "false"
+		},
+		/*"temperature": {
+			"thermal-zone": 2,
+			"format": "  {temperatureC}°C /",
+			"interval": 5
+		},*/
+		"cpu": {
+      "format": "   {usage}%",
+			"interval": 5,
+			"min-length": 6
+		},
+		"memory": {
+      "format": "   {used} GiB",
+			"interval": 5,
+			"min-length": 10
+		}
   }
+
 
 ]

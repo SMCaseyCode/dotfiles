@@ -40,6 +40,53 @@ hl.window_rule({
 })
 
 hl.window_rule({
+  name = "Game-Window-Optimization",
+  border_size = 0,
+  no_blur = true,
+  no_shadow = true,
+  no_anim = true,
+  fullscreen = true,
+  center = true,
+  workspace = "special:magic",
+  match = { class = "steam_app.*|.*.x86_64|.*.exe|gamescope" }
+})
+
+hl.window_rule({
+  name = "Awakened-Poe-Trade",
+  float = true,
+  no_blur = true,
+  no_shadow = true,
+  no_anim = true,
+  border_size = 0,
+  match = { class = "awakened-poe-trade" }
+})
+hl.window_rule({
+  name = "float-PoE",
+  float = true,
+  border_size = 0,
+  no_blur = true,
+  no_shadow = true,
+  no_anim = true,
+  fullscreen = true,
+  center = true,
+  workspace = "special:magic",
+  match = { class = "steam_app_238960" }
+})
+
+hl.window_rule({
+	name = "windowrule-no-transparent-Plex",
+	opacity = "1.0 1.0 override",
+	match = { namespace = "Plex" },
+})
+
+hl.window_rule({
+	name = "windowrule-no-transparent-youtube",
+	opacity = "1.0 1.0 override",
+	match = { title = ".*YouTube.*" },
+})
+
+
+hl.window_rule({
 	name = "windowrule-no-transparent-youtube",
 	opacity = "1.0 1.0 override",
 	match = { title = ".*YouTube.*" },

@@ -22,8 +22,12 @@ hl.bind(
 -- SwayNC Toggle
 hl.bind(mainMod .. " + SHIFT + n", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
--- Toggle Fullscreen
+-- Toggle Fullscreen + Toggle Fullscreen for Gamescope
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
+
+-- Toggle Pin (Applicable to floating windows only)
+hl.bind(mainMod .. " + P", hl.dsp.window.pin({ action = "toggle" }))
 
 -- SCREENSHOTS
 -- Screenshot a Window
@@ -48,7 +52,7 @@ hl.bind(
 )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(programs.fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
+-- hl.bind(mainMod .. " + P", hl.dsp.window.pseudo()) Default changed to toggle pin.
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
 -- Move focus with mainMod + arrow keys

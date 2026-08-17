@@ -15,4 +15,23 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
   -- Required for things like GNOME calculator to match theme
   hl.exec_cmd("/usr/lib/xdg-desktop-portal")
+  hl.exec_cmd("sleep 5 && systemctl --user restart lianli-daemon.service")
+  hl.exec_cmd("hyprctl output create headless")
+
+  -- Clipboard
+  -- hl.exec_cmd("wl-paste --type text --watch cliphist store")
+  -- hl.exec_cmd("wl-paste --type image --watch cliphist store")
+  -- hl.exec_cmd("wl-clip-persist --clipboard regular")
+
+
+
+
+
+
+
+
+
+
+
 end)
+
